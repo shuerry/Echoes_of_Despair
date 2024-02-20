@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
             } else {
                 flashlight.intensity = 1;
             }
-            
         }
     }
 }

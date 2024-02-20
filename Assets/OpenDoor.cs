@@ -14,9 +14,10 @@ public class OpenDoor : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && 
-            (Vector3.Distance(player.position, transform.position) < 2)) {
+            (Vector3.Distance(player.position, transform.position) < 2)) 
+        {
+            gameObject.GetComponent<Animator>().SetTrigger("openDoor");
             Debug.Log("Door open!");
-            gameObject.GetComponent<Animator>().SetTrigger("doorSwing");
         }
     }
 }
