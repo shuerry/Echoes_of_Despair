@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         flashlight = GetComponentInChildren<Light>();
         flashlightOn = false;
+        flashlight.intensity = 0;
         // yPos = transform.position.y;
     }
  
@@ -64,10 +65,13 @@ public class PlayerController : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.F)) {
-                Debug.Log("Flashlight");
                 if (flashlightOn) {
+                    Debug.Log("Flashlight Turn Off");
+                    flashlightOn = false;
                     flashlight.intensity = 0;
                 } else {
+                    Debug.Log("Flashlight Turn On");
+                    flashlightOn = true;
                     flashlight.intensity = 1;
                 }
             }
