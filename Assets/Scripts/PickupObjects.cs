@@ -9,12 +9,15 @@ public class PickupObjects : MonoBehaviour
     [SerializeField] private LayerMask pickupLayerMask;
     [SerializeField] private Transform objectGrab;
 
-      private ObjectGrabbable objectGrabbable;
+    private ObjectGrabbable objectGrabbable;
+
+    // boolean for each object
+    public static bool gotPipe = false;
       
     // Start is called before the first frame update
     void Start()
     {
-        
+        gotPipe = false;
     }
 
     // Update is called once per frame
