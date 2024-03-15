@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-       wanderPoints = GameObject.FindGameObjectsWithTag("WanderPoint");
+        wanderPoints = GameObject.FindGameObjectsWithTag("WanderPoint");
         anim = GetComponent<Animator>();
 
        

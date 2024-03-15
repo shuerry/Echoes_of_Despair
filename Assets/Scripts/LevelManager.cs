@@ -22,6 +22,8 @@ public class LevelManager : MonoBehaviour
 //    public static bool lessThanHalfTime = false;
 
     public string nextLevel;
+    GameObject nextLevelObj;
+    public static GameObject player;
 //    float countDown;
     void Start()
     {
@@ -29,12 +31,17 @@ public class LevelManager : MonoBehaviour
         // score = 0;
         // countDown = levelDuration;
         // SetTimerText();
+        nextLevelObj = GameObject.FindGameObjectWithTag("NextLevel");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!isGameOver) {
+            if (Vector3.Distance(player.transform.position, nextLevelObj.transform.position) < 0.01) {
+                LevelBeat();
+            }
             // will be controlled via player health / death function -- tbd
             /* if (countDown > 0) {
                 countDown -= Time.deltaTime;
