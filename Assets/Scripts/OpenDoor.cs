@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     Transform player;
+    public AudioClip doorSFX;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -17,6 +18,9 @@ public class OpenDoor : MonoBehaviour
             (Vector3.Distance(player.position, transform.position) < 2)) 
         {
             gameObject.GetComponent<Animator>().SetTrigger("openDoor");
+
+            AudioSource.PlayClipAtPoint(doorSFX, transform.position);
+            
             Debug.Log("Door open!");
         }
     }

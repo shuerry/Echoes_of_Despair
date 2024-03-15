@@ -51,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking) {
             lerpFinish = playerPosition;
         }
-        transform.Translate(lerpStart, lerpFinish, weaponSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(lerpStart, lerpFinish, weaponSpeed * Time.deltaTime);
         // Vector3.Lerp(lerpStart, lerpFinish, weaponSpeed * Time.deltaTime);
     }
 

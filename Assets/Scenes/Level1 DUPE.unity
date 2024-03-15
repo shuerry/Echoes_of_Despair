@@ -4135,8 +4135,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1869413439235817812, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
-    - {fileID: 4564643829142665305, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -42001,8 +42000,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1869413439235817812, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -44913,6 +44911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6a2077941194d63afc62e8eb40935b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorSFX: {fileID: 8300000, guid: e08b445b8e4638843af67ada9be512a1, type: 3}
 --- !u!1 &1555894552
 GameObject:
   m_ObjectHideFlags: 0
