@@ -22,6 +22,7 @@ public class ObjectGrab : MonoBehaviour
             if (!isGrabbed)
             {
                 Grab();
+                LevelManager.haveWeapon = true;
             }
             else
             {

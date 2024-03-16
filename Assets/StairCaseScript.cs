@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class StairCaseScript : MonoBehaviour
 {
     Transform player;
     public AudioClip doorSFX;
@@ -17,7 +17,8 @@ public class OpenDoor : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && 
-            (Vector3.Distance(player.position, transform.position) < 2)) 
+            (Vector3.Distance(player.position, transform.position) < 2) &&
+            LevelManager.haveWeapon) 
         {
             gameObject.GetComponent<Animator>().SetTrigger("openDoor");
 

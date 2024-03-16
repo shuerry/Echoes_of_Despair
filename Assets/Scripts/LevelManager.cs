@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     public string nextLevel;
     GameObject nextLevelObj;
     public static GameObject player;
+    public static bool haveWeapon;
 //    float countDown;
     void Start()
     {
@@ -33,6 +34,7 @@ public class LevelManager : MonoBehaviour
         // SetTimerText();
         nextLevelObj = GameObject.FindGameObjectWithTag("NextLevel");
         player = GameObject.FindGameObjectWithTag("Player");
+        haveWeapon = false;
     }
 
     // Update is called once per frame
