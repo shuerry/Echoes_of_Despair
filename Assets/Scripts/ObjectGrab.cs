@@ -17,7 +17,7 @@ public class ObjectGrab : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             if (!isGrabbed)
             {
@@ -27,7 +27,13 @@ public class ObjectGrab : MonoBehaviour
             else
             {
                 Drop();
+                LevelManager.haveWeapon = false;
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.X) && isGrabbed)
+        {
+            Drop();
+            LevelManager.haveWeapon = false;
         }
     }
 

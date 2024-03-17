@@ -8,6 +8,9 @@ TagManager:
   - WanderPoint
   - Pipe
   - NextLevel
+  - PipeParent
+  - WonderPoints2
+  - WanderPoints2
   layers:
   - Default
   - TransparentFX

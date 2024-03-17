@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class Enemy2AI : MonoBehaviour
 {
     public enum FSMStates
     {
@@ -37,11 +37,11 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        wanderPoints = GameObject.FindGameObjectsWithTag("WanderPoint");
+        wanderPoints = GameObject.FindGameObjectsWithTag("WanderPoints2");
         anim = GetComponent<Animator>();
 
-       
-       enemyHealth = GetComponent<EnemyHealth>();
+
+        enemyHealth = GetComponent<EnemyHealth>();
         health = enemyHealth.currentHealth;
 
         isDead = false;
@@ -56,7 +56,7 @@ public class EnemyAI : MonoBehaviour
         if (health <= 0 && currentState != FSMStates.Dead)
         {
             currentState = FSMStates.Dead;
-            return; 
+            return;
         }
         switch (currentState)
         {
@@ -74,10 +74,10 @@ public class EnemyAI : MonoBehaviour
                 break;
         }
         elapsedTime += Time.deltaTime;
-       /* if (health <= 0)
-        {
-            currentState = FSMStates.Dead;
-        }*/
+        /* if (health <= 0)
+         {
+             currentState = FSMStates.Dead;
+         }*/
 
     }
 
@@ -86,7 +86,7 @@ public class EnemyAI : MonoBehaviour
     {
         currentState = FSMStates.Patrol;
         FindNextPoint();
-        
+
 
 
     }
@@ -137,7 +137,7 @@ public class EnemyAI : MonoBehaviour
             {
                 elapsedTime = 0f;
                 currentState = FSMStates.Attack;
-              
+
                 anim.SetInteger("animState", 3);
                 player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
                 // [lay attack sound effect
@@ -155,11 +155,11 @@ public class EnemyAI : MonoBehaviour
             currentState = FSMStates.Patrol;
             FaceTarget(nextDestination);
         }
-     
+
     }
 
 
-        void UpdateDeadState()
+    void UpdateDeadState()
     {
         anim.SetInteger("animState", 4);
         isDead = true;
@@ -182,12 +182,12 @@ public class EnemyAI : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 10 * Time.deltaTime);
     }
 
- 
+
 
 
     private void OnDestroy()
     {
-       Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
+        Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
     }
 
     private void OnDrawGizmos()
@@ -198,5 +198,4 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseDistance);
 
     }
-
 }
