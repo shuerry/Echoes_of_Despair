@@ -65900,7 +65900,7 @@ PrefabInstance:
     - target: {fileID: 1430723033614061036, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
       propertyPath: deadSFX
       value: 
-      objectReference: {fileID: 8300000, guid: f4dbe1051f8b7374a9d7c44708d72c06, type: 3}
+      objectReference: {fileID: 8300000, guid: 7208c9413da11ae44969d3d46029df27, type: 3}
     - target: {fileID: 1430723033614061036, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
       propertyPath: startingHealth
       value: 30

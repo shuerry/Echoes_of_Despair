@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
 
+            AudioSource.PlayClipAtPoint(deadSFX, transform.position);
 
         }
 
