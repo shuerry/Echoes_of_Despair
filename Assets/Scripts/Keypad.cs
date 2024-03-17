@@ -10,7 +10,8 @@ public class Keypad : MonoBehaviour
     public Text answer;
     public Animator door; 
     public AudioClip doorSFX;
-    public GameObject doorObject; 
+    public GameObject doorObject;
+    public Canvas canvas;
     bool soundPlayed;
 
 
@@ -34,6 +35,7 @@ public class Keypad : MonoBehaviour
                 AudioSource.PlayClipAtPoint(doorSFX, transform.position);
                 soundPlayed = true;
             }
+            canvas.enabled = false;
         }
         else
         {
@@ -48,6 +50,6 @@ public class Keypad : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        
+        canvas.enabled = true;
     }
 }
