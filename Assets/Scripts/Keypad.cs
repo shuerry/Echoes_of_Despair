@@ -10,6 +10,7 @@ public class Keypad : MonoBehaviour
     public Text answer;
     public Animator door; 
     public AudioClip doorSFX;
+    public GameObject doorObject; 
     bool soundPlayed;
 
 
@@ -41,5 +42,12 @@ public class Keypad : MonoBehaviour
             answer.text = "";
 
         }
+    }
+
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
     }
 }
