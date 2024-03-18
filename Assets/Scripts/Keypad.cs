@@ -10,6 +10,7 @@ public class Keypad : MonoBehaviour
     public Text answer;
     public Animator door; 
     public AudioClip doorSFX;
+    public AudioClip buttonSFX;
     public GameObject doorObject;
     public Canvas canvas;
     bool soundPlayed;
@@ -19,22 +20,24 @@ public class Keypad : MonoBehaviour
 
     public void Number(int number)
     {
-        answer.text += number.ToString(); 
-        
+        answer.text += number.ToString();
+
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
     }
 
     public void Execute()
     {
-        if(answer.text == codeAnswer)
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        if (answer.text == codeAnswer)
         {
            
             answer.text = "CORRECT";
             door.SetBool("doorOpen", true); 
-            if (!soundPlayed)
-            {
-                AudioSource.PlayClipAtPoint(doorSFX, transform.position);
-                soundPlayed = true;
-            }
+           
+            AudioSource.PlayClipAtPoint(doorSFX, transform.position);
+            
+           
+
             canvas.enabled = false;
         }
         else
