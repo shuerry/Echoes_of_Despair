@@ -15,7 +15,8 @@ public class Item : ScriptableObject
 
     public enum ItemType {
         Pipe,
-         MedKit
+         MedKit,
+         Key
         }
 
 

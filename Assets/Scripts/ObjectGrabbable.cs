@@ -6,7 +6,8 @@ public class ObjectGrabbable : MonoBehaviour
 {
 
     private Rigidbody rb;
-    private Transform objectGrabPoint;  
+    private Transform objectGrabPoint;
+    Item item; 
 
     private void Awake() {
 
@@ -15,7 +16,8 @@ public class ObjectGrabbable : MonoBehaviour
     public void Grab(Transform objectGrabPoint)
     {
         this.objectGrabPoint = objectGrabPoint;
-        rb.useGravity = false;  
+        rb.useGravity = false;
+       
 
     }
 
