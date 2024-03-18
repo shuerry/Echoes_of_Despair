@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 8668828821258680567}
   - component: {fileID: 5583526222153962857}
   - component: {fileID: 756280857297669823}
+  - component: {fileID: -7400635402975951452}
+  - component: {fileID: 7078487034368948164}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Pipe
@@ -6239,3 +6241,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3660153, y: 0.9409111, z: 0.2000003}
   m_Center: {x: 0.37440488, y: 1.3403983, z: -0.41769212}
+--- !u!114 &-7400635402975951452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949595946994603026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a0201fd4d3144d6bde17bf8c167ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: b755e62556c5a48e1a0156923cacbe99, type: 2}
+--- !u!114 &7078487034368948164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949595946994603026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02989a7c095554e35875acb49fa8637f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: b755e62556c5a48e1a0156923cacbe99, type: 2}
