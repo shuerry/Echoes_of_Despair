@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         if (!isGameOver) {
-            if (Vector3.Distance(player.transform.position, nextLevelObj.transform.position) < 0.01) {
+            if (Vector3.Distance(player.transform.position, nextLevelObj.transform.position) < 3) {
                 LevelBeat();
             }
             // will be controlled via player health / death function -- tbd
