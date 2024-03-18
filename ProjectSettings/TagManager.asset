@@ -11,6 +11,7 @@ TagManager:
   - PipeParent
   - WonderPoints2
   - WanderPoints2
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
