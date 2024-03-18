@@ -1,9 +1,10 @@
-using System.Collections;
+  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth instance; 
 
     public int startingHealth = 100;
     public Slider healthSlider;
@@ -64,4 +65,5 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth;
         healthSlider.value = currentHealth;
     }
+
 }
