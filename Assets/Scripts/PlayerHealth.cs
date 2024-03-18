@@ -10,6 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public Slider healthSlider;
     public int currentHealth;
     public AudioClip deadSFX;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         currentHealth = startingHealth;
