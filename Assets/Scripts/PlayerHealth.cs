@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
-    public static PlayerHealth instance; 
+    public static PlayerHealth Instance; 
 
     public int startingHealth = 100;
     public Slider healthSlider;

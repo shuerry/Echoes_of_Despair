@@ -27,7 +27,7 @@ public class InventoryItemController : MonoBehaviour
             case Item.ItemType.Pipe:
                 break;
             case Item.ItemType.MedKit:
-                PlayerHealth.instance.TakeHealth(item.value);
+                PlayerHealth.Instance.TakeHealth(item.value);
                 break;
             default:
                 break;   
