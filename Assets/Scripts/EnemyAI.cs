@@ -164,6 +164,10 @@ public class EnemyAI : MonoBehaviour
         anim.SetInteger("animState", 4);
         isDead = true;
         deadTransform = gameObject.transform;
+        if (health <= 0)
+        {
+            Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
+        }
         Destroy(gameObject, 3);
     }
 
@@ -187,7 +191,7 @@ public class EnemyAI : MonoBehaviour
 
     private void OnDestroy()
     {
-       Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
+     // Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
     }
 
     private void OnDrawGizmos()

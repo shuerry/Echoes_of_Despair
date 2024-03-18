@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = startingHealth;
-        healthSlider.value = currentHealth;
+      //  healthSlider.value = currentHealth;
     }
 
     // Update is called once per frame
@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
     public void ResetHealth()
     {
         currentHealth = startingHealth;
-        healthSlider.value = currentHealth;
+      //  healthSlider.value = currentHealth;
     }
 
 }

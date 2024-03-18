@@ -34,6 +34,7 @@ public class LevelManager : MonoBehaviour
         // SetTimerText();
         nextLevelObj = GameObject.FindGameObjectWithTag("NextLevel");
         player = GameObject.FindGameObjectWithTag("Player");
+        FindObjectOfType<PlayerHealth>().ResetHealth();
         haveWeapon = false;
     }
 
@@ -41,6 +42,10 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         if (!isGameOver) {
+            if (FindObjectOfType<PlayerHealth>().currentHealth <= 0)
+            {
+                LevelLost();
+            }
             if (Vector3.Distance(player.transform.position, nextLevelObj.transform.position) < 3) {
                 LevelBeat();
             }
@@ -68,7 +73,7 @@ public class LevelManager : MonoBehaviour
         // gameText.text = "GAME OVER";
         // gameText.gameObject.SetActive(true);
 
-        Camera.main.GetComponent<AudioSource>().pitch = 1;
+       // Camera.main.GetComponent<AudioSource>().pitch = 1;
         AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
 
         Invoke("LoadCurrentLevel", 2);

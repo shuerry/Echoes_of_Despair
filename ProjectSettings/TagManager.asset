@@ -12,6 +12,7 @@ TagManager:
   - WonderPoints2
   - WanderPoints2
   - EnemySpawner
+  - Key
   layers:
   - Default
   - TransparentFX
