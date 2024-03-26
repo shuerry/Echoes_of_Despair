@@ -9,7 +9,9 @@ public class Keypad : MonoBehaviour
 
     public Text answer;
     public Animator door; 
-    public AudioClip doorSFX;
+    //public AudioClip doorSFX;
+    public AnimationClip doorSwingAnim;
+    AudioSource audioSource;
     public AudioClip buttonSFX;
     public GameObject doorObject;
     public Canvas canvas;
@@ -18,6 +20,11 @@ public class Keypad : MonoBehaviour
 
     private string codeAnswer = "8784";
 
+    void Start()
+    {
+        
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Number(int number)
     {
         answer.text += number.ToString();
@@ -34,11 +41,14 @@ public class Keypad : MonoBehaviour
             answer.text = "CORRECT";
             door.SetBool("doorOpen", true); 
            
-            AudioSource.PlayClipAtPoint(doorSFX, transform.position);
+ 
+            gameObject.GetComponent<Animator>().SetTrigger("openDoor");
             
-           
+                audioSource.Play();
+                StartCoroutine(PlaySound());
 
-            canvas.enabled = false;
+
+                canvas.enabled = false;
         }
         else
         {
@@ -50,6 +60,12 @@ public class Keypad : MonoBehaviour
     }
 
 
+    IEnumerator PlaySound()
+    {
+        yield return new WaitForSecondsRealtime(doorSwingAnim.length);
+        audioSource.Stop();
+        Debug.Log("audio stop");
+    }
 
     public void OnTriggerEnter(Collider other)
     {

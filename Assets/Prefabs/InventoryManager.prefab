@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items: []
-  ItemContent: {fileID: 0}
+  ItemContent: {fileID: 8068421335840129004}
   InventoryItem: {fileID: 2281854759556451948, guid: d110b3095d66442368b1d0e6497d5e92, type: 3}
   EnableRemove: {fileID: 0}
   InventoryItems: []

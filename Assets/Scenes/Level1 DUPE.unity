@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20061573, g: 0.20333138, b: 0.2036938, a: 1}
+  m_IndirectSpecularColor: {r: 0.20061573, g: 0.20333138, b: 0.20369378, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5961,7 +5961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401cdea17b90aec4bbb55647eb6593da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorSFX: {fileID: 8300000, guid: e08b445b8e4638843af67ada9be512a1, type: 3}
+  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
 --- !u!1 &158056349
 GameObject:
   m_ObjectHideFlags: 0
@@ -8484,13 +8484,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4564643829142665305, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3792127229772766613, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 132316445}
+    - targetCorrespondingSourceObject: {fileID: 1306815886435308726, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1054624522}
   m_SourcePrefab: {fileID: 100100000, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
 --- !u!4 &285620592 stripped
 Transform:
@@ -32317,6 +32321,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1054624518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1306815886435308726, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+  m_PrefabInstance: {fileID: 285620591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1054624522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054624518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401cdea17b90aec4bbb55647eb6593da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
 --- !u!43 &1058777199
 Mesh:
   m_ObjectHideFlags: 0

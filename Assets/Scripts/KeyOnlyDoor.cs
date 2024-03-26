@@ -5,16 +5,18 @@ using UnityEngine;
 public class KeyOnlyDoor : MonoBehaviour
 {
     Transform player;
-    public AudioClip doorSFX;
     bool soundPlayed;
     bool hasKey;
-
+    public AnimationClip doorSwingAnim;
+    AudioSource audioSource;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         soundPlayed = false;
         hasKey = false;
+        audioSource = GetComponent<AudioSource>();
     }
+
 
     void Update()
     {
@@ -22,10 +24,10 @@ public class KeyOnlyDoor : MonoBehaviour
             (Vector3.Distance(player.position, transform.position) < 2) && CheckForKey(player))
         {
             gameObject.GetComponent<Animator>().SetTrigger("openDoor");
-
             if (!soundPlayed)
             {
-                AudioSource.PlayClipAtPoint(doorSFX, transform.position);
+                audioSource.Play();
+                StartCoroutine(PlaySound());
                 soundPlayed = true;
             }
 
@@ -33,7 +35,16 @@ public class KeyOnlyDoor : MonoBehaviour
         }
     }
 
-    bool CheckForKey(Transform obj)
+   
+
+    IEnumerator PlaySound()
+{
+    yield return new WaitForSecondsRealtime(doorSwingAnim.length);
+    audioSource.Stop();
+    Debug.Log("audio stop");
+}
+
+bool CheckForKey(Transform obj)
     {
         foreach (Transform child in obj)
         {

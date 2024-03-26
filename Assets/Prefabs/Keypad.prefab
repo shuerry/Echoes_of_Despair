@@ -1795,8 +1795,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answer: {fileID: 8883798096214658441}
-  door: {fileID: 0}
   doorSFX: {fileID: 8300000, guid: e08b445b8e4638843af67ada9be512a1, type: 3}
+  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
+  buttonSFX: {fileID: 0}
+  doorObject: {fileID: 7353418545908210696, guid: 74f2d5b47440c46308f37bad38ffc9f5, type: 3}
+  canvas: {fileID: 0}
 --- !u!1 &6812196748752900773
 GameObject:
   m_ObjectHideFlags: 0
