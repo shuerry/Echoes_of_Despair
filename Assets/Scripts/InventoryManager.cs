@@ -12,8 +12,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryItem;
     public Toggle EnableRemove;
     public InventoryItemController[] InventoryItems;
-       
-       
+
+
 
 
     private void Awake()
