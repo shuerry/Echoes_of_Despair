@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     rigid body of this object.
     */
     private Rigidbody rb;
-    public float moveSpeed;
+    public float moveSpeed = 5;
     public float gravity = 9.81f;
     public float airControl = 10;
 
@@ -37,7 +37,18 @@ public class PlayerController : MonoBehaviour
             float moveVertical = Input.GetAxis("Vertical");
 
             input = (transform.right * moveHorizontal + transform.forward * moveVertical).normalized;
+            // input *= moveSpeed;
+
+            if (Input.GetKeyDown(KeyCode.LeftShift)) {
+                moveSpeed *= 2;
+                Debug.Log("Increase Speed: " + input);
+            } else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+                moveSpeed /= 2;
+                Debug.Log("Decrease Speed: " + input);
+            }
+
             input *= moveSpeed;
+            
             
             if (controller.isGrounded) {
                moveDirection = input;
