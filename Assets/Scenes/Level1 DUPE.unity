@@ -11316,6 +11316,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 725550072737693213, guid: 5524fcc9b824a4fa3892422b15dae07b, type: 3}
+      propertyPath: ItemContent
+      value: 
+      objectReference: {fileID: 1462302616}
+    - target: {fileID: 725550072737693213, guid: 5524fcc9b824a4fa3892422b15dae07b, type: 3}
+      propertyPath: EnableRemove
+      value: 
+      objectReference: {fileID: 1308341395}
     - target: {fileID: 1323928388612959963, guid: 5524fcc9b824a4fa3892422b15dae07b, type: 3}
       propertyPath: m_Name
       value: InventoryManager
@@ -39177,6 +39185,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1308341395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3331907378932743663, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
+  m_PrefabInstance: {fileID: 1576650164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1308973038
 Mesh:
   m_ObjectHideFlags: 0
@@ -44800,6 +44819,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac260144bafe844e85d599cd776dd50, type: 3}
+--- !u!224 &1462302616 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5457716621810160101, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
+  m_PrefabInstance: {fileID: 1576650164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1463145720
 Mesh:
   m_ObjectHideFlags: 0
@@ -47034,6 +47058,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3288344517501352228, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1857296652}
+    - target: {fileID: 3288344517501352228, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288344517501352228, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ListItems
+      objectReference: {fileID: 0}
     - target: {fileID: 5548673064134667883, guid: 9582c44e2b28b4b2987a9227201d4364, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -62920,6 +62956,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1857296652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 725550072737693213, guid: 5524fcc9b824a4fa3892422b15dae07b, type: 3}
+  m_PrefabInstance: {fileID: 405949977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4a3c18f53f74420b71cc995e65034d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1892691913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1056135091110754, guid: 33af882668a154e45888b123f70ee627, type: 3}
