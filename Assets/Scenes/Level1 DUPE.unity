@@ -8812,6 +8812,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6746019201650648394, guid: d8e5dcb66c30644f6b01ec7dcf9cf827, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7185328688831475360, guid: d8e5dcb66c30644f6b01ec7dcf9cf827, type: 3}
       propertyPath: door
       value: 
