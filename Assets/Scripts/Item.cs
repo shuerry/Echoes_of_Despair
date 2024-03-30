@@ -17,8 +17,11 @@ public class Item : ScriptableObject
          Pipe,
          MedKit,
          Key,
-         Journal
-        }
+         Journal1,
+         Journal2,
+         Journal3,
+         Journal4
+    }
 
 
 

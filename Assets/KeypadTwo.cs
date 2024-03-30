@@ -3,52 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Keypad : MonoBehaviour
+public class KeypadTwo : MonoBehaviour
 {
 
-
     public Text answer;
-    public Animator door; 
+    public Animator door;
     //public AudioClip doorSFX;
     public AnimationClip doorSwingAnim;
     AudioSource audioSource;
-    //public AudioClip buttonSFX;
+    public AudioClip buttonSFX;
     public GameObject doorObject;
     public Canvas canvas;
     bool soundPlayed;
 
 
-    private string codeAnswer = "8784";
+    private string codeAnswer = "1845";
 
     void Start()
     {
-        
+
         audioSource = GetComponent<AudioSource>();
     }
     public void Number(int number)
     {
         answer.text += number.ToString();
 
-        //AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
     }
 
     public void Execute()
     {
-      //  AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
-        if (answer.text == codeAnswer || answer.text == "1845")
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        if (answer.text == codeAnswer)
         {
-           
+
             answer.text = "CORRECT";
-            door.SetBool("doorOpen", true); 
-           
- 
+            door.SetBool("doorOpen", true);
+
+
             gameObject.GetComponent<Animator>().SetTrigger("openDoor");
-            
-                audioSource.Play();
-                StartCoroutine(PlaySound());
+
+            audioSource.Play();
+            StartCoroutine(PlaySound());
 
 
-                canvas.enabled = false;
+            canvas.enabled = false;
         }
         else
         {

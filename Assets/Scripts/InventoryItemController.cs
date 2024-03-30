@@ -31,6 +31,18 @@ public class InventoryItemController : MonoBehaviour
                 break;
             case Item.ItemType.Key:
                 break;
+            case Item.ItemType.Journal1:
+                JournalReading.Instance.ShowBookText(true);
+                break;
+            case Item.ItemType.Journal2:
+                JournalReading2.Instance.ShowBookText(true);
+                break;
+            case Item.ItemType.Journal3:
+                JournalReading3.Instance.ShowBookText(true);
+                break;
+            case Item.ItemType.Journal4:
+                JournalReading4.Instance.ShowBookText(true);
+                break;
             default:
                 break;   
         }
