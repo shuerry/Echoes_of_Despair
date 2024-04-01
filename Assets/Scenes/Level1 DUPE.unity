@@ -55675,7 +55675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1224112364}
-  transitionTime: 1
+  transitionTime: 2
+  transitionSFX: {fileID: 8300000, guid: 8026796077817464686bb8c5ffaed19d, type: 3}
   gameOverSFX: {fileID: 8300000, guid: ef12199a90c7949d4a3b9d9040151851, type: 3}
   nextLevel: Level2-A
 --- !u!4 &1718729267
@@ -67138,7 +67139,7 @@ PrefabInstance:
       objectReference: {fileID: 1332738128}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.44
+      value: 5.662
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -67146,7 +67147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.428
+      value: -4.311
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalRotation.w

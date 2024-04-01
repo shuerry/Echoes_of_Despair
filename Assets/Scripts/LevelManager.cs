@@ -9,10 +9,12 @@ public class LevelManager : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 2f;
-//    public float levelDuration = 30.0f;
-//    public float levelScoreNeeded = 5;
-//    public Text timerText;
-//    public Text gameText;
+    //    public float levelDuration = 30.0f;
+    //    public float levelScoreNeeded = 5;
+    //    public Text timerText;
+    //    public Text gameText;
+
+    public AudioClip transitionSFX;
 
 // This is still here in case we want it but like. lowkey. it doesn't matter how long it takes as long as they don't die
     public AudioClip gameOverSFX;
@@ -90,12 +92,13 @@ public class LevelManager : MonoBehaviour
         // AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
         if(!string.IsNullOrEmpty(nextLevel)) {
-            Invoke("LoadNextLevel", 0);
+            AudioSource.PlayClipAtPoint(transitionSFX, Camera.main.transform.position);
+            StartCoroutine(LoadLevel());
+            Invoke("LoadNextLevel", 3);
         }
     }
 
     void LoadNextLevel() {
-        StartCoroutine(LoadLevel());
         SceneManager.LoadScene(nextLevel);
     }
 

@@ -37296,7 +37296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1667600198}
-  transitionTime: 1
+  transitionTime: 2
+  transitionSFX: {fileID: 8300000, guid: 8026796077817464686bb8c5ffaed19d, type: 3}
   gameOverSFX: {fileID: 8300000, guid: ef12199a90c7949d4a3b9d9040151851, type: 3}
   nextLevel: Level2-B
 --- !u!4 &1718729267

@@ -28432,7 +28432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.84
+      value: 2.195
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28440,7 +28440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.6
+      value: -6.252
       objectReference: {fileID: 0}
     - target: {fileID: 6960351118706674052, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39051,7 +39051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 574757044}
-  transitionTime: 1
+  transitionTime: 2
+  transitionSFX: {fileID: 8300000, guid: 8026796077817464686bb8c5ffaed19d, type: 3}
   gameOverSFX: {fileID: 8300000, guid: ef12199a90c7949d4a3b9d9040151851, type: 3}
   nextLevel: Level3
 --- !u!4 &1718729267
