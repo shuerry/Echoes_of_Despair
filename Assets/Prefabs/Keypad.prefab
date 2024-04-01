@@ -1706,9 +1706,10 @@ GameObject:
   - component: {fileID: 5725893882939111944}
   - component: {fileID: 2777946178478365008}
   - component: {fileID: 4170545029784246037}
-  - component: {fileID: 7185328688831475360}
   - component: {fileID: 6999029031286232152}
+  - component: {fileID: 7185328688831475360}
   - component: {fileID: 5357879776450573623}
+  - component: {fileID: 3462749699302619112}
   m_Layer: 5
   m_Name: 'Keypad '
   m_TagString: Untagged
@@ -1784,23 +1785,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7185328688831475360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6770940587094660882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8457b1b6679e042f195c2fda396d6ef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answer: {fileID: 8883798096214658441}
-  door: {fileID: 0}
-  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
-  doorObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
-  canvas: {fileID: 0}
 --- !u!95 &6999029031286232152
 Animator:
   serializedVersion: 5
@@ -1822,6 +1806,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7185328688831475360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770940587094660882}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457b1b6679e042f195c2fda396d6ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answer: {fileID: 8883798096214658441}
+  door: {fileID: 0}
+  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
+  doorObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+  canvas: {fileID: 0}
 --- !u!82 &5357879776450573623
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1918,6 +1919,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3462749699302619112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770940587094660882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e441b9cc6a89e448220c5c4b605998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answer: {fileID: 8883798096214658441}
+  door: {fileID: 0}
+  doorSwingAnim: {fileID: 7400000, guid: 9f00a1f6c666f4475a9e75fe59f3e6ed, type: 2}
+  doorObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+  canvas: {fileID: 0}
 --- !u!1 &6812196748752900773
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KeypadTwo : MonoBehaviour
+public class ColorKeypad : MonoBehaviour
 {
-
     public Text answer;
     public Animator door;
     //public AudioClip doorSFX;
     public AnimationClip doorSwingAnim;
     AudioSource audioSource;
-    public AudioClip buttonSFX;
+    //public AudioClip buttonSFX;
     public GameObject doorObject;
     public Canvas canvas;
     bool soundPlayed;
 
 
-    private string codeAnswer = "1845";
+    private string codeAnswer = "136948527";
 
     void Start()
     {
@@ -28,12 +27,12 @@ public class KeypadTwo : MonoBehaviour
     {
         answer.text += number.ToString();
 
-        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        //AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
     }
 
     public void Execute()
     {
-        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        //  AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
         if (answer.text == codeAnswer)
         {
 
@@ -71,3 +70,4 @@ public class KeypadTwo : MonoBehaviour
         canvas.enabled = true;
     }
 }
+
