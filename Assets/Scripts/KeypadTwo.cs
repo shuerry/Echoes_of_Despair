@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class KeypadTwo : MonoBehaviour
 {
-
     public Text answer;
     public Animator door;
     //public AudioClip doorSFX;
@@ -34,7 +33,7 @@ public class KeypadTwo : MonoBehaviour
     public void Execute()
     {
         //  AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
-        if (answer.text == codeAnswer || answer.text == "1845")
+        if (answer.text == codeAnswer)
         {
 
             answer.text = "CORRECT";
@@ -70,6 +69,5 @@ public class KeypadTwo : MonoBehaviour
     {
         canvas.enabled = true;
     }
-
-
 }
+
