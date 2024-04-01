@@ -18963,6 +18963,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7185328688831475360, guid: d8e5dcb66c30644f6b01ec7dcf9cf827, type: 3}
+      propertyPath: doorObject
+      value: 
+      objectReference: {fileID: 366483083}
+    - target: {fileID: 7185328688831475360, guid: d8e5dcb66c30644f6b01ec7dcf9cf827, type: 3}
+      propertyPath: doorSwingAnim
+      value: 
+      objectReference: {fileID: 7400000, guid: 122a160d2544449298357e0ef2c1b4d2, type: 2}
     m_RemovedComponents:
     - {fileID: 3462749699302619112, guid: d8e5dcb66c30644f6b01ec7dcf9cf827, type: 3}
     m_RemovedGameObjects: []
