@@ -16,7 +16,7 @@ public class ColorKeypad : MonoBehaviour
     bool soundPlayed;
 
 
-    private string codeAnswer = "136948527";
+    private string codeAnswer = "1369485271";
 
     void Start()
     {
