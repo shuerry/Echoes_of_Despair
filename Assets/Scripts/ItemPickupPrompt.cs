@@ -24,7 +24,7 @@ public class ItemPickupPrompt : MonoBehaviour
         {
             pickUpText.gameObject.SetActive(true);
 
-            Invoke("Disable", 2);
+            Invoke("Disable", .5f);
         }
         
     }
