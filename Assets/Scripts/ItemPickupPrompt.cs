@@ -23,7 +23,11 @@ public class ItemPickupPrompt : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             pickUpText.gameObject.SetActive(true);
-            Invoke("Disable", 5);
+<<<<<<< HEAD
+            Invoke("Disable", 1.0f);
+=======
+            Invoke("Disable", 2);
+>>>>>>> d29e712cf408343859c846fa6bc5d2c9c8644ce1
 
 
            

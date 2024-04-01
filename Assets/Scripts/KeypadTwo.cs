@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorKeypad : MonoBehaviour
+public class KeypadTwo : MonoBehaviour
 {
+
     public Text answer;
     public Animator door;
     //public AudioClip doorSFX;
@@ -16,7 +17,7 @@ public class ColorKeypad : MonoBehaviour
     bool soundPlayed;
 
 
-    private string codeAnswer = "1369485271";
+    private string codeAnswer = "1845";
 
     void Start()
     {
@@ -33,7 +34,7 @@ public class ColorKeypad : MonoBehaviour
     public void Execute()
     {
         //  AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
-        if (answer.text == codeAnswer)
+        if (answer.text == codeAnswer || answer.text == "1845")
         {
 
             answer.text = "CORRECT";
@@ -69,5 +70,6 @@ public class ColorKeypad : MonoBehaviour
     {
         canvas.enabled = true;
     }
-}
 
+
+}
