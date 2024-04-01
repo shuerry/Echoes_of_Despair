@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public Animator transition;
+    public float transitionTime = 2f;
 //    public float levelDuration = 30.0f;
 //    public float levelScoreNeeded = 5;
 //    public Text timerText;
@@ -76,7 +78,7 @@ public class LevelManager : MonoBehaviour
        // Camera.main.GetComponent<AudioSource>().pitch = 1;
         AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
 
-        Invoke("LoadCurrentLevel", 2);
+        Invoke("LoadCurrentLevel", 1);
     }
 
     public void LevelBeat() {
@@ -88,15 +90,23 @@ public class LevelManager : MonoBehaviour
         // AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
         if(!string.IsNullOrEmpty(nextLevel)) {
-            Invoke("LoadNextLevel", 2);
+            Invoke("LoadNextLevel", 0);
         }
     }
 
     void LoadNextLevel() {
+        StartCoroutine(LoadLevel());
         SceneManager.LoadScene(nextLevel);
     }
 
     void LoadCurrentLevel() {
+        StartCoroutine(LoadLevel());
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("loadingStart");
+        yield return new WaitForSeconds(transitionTime);
     }
 }
