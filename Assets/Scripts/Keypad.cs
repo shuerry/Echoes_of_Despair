@@ -16,6 +16,7 @@ public class Keypad : MonoBehaviour
     public GameObject doorObject;
     public Canvas canvas;
     bool soundPlayed;
+    public AudioClip buttonSFX;
 
 
     private string codeAnswer = "8784";
@@ -29,12 +30,12 @@ public class Keypad : MonoBehaviour
     {
         answer.text += number.ToString();
 
-        //AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
     }
 
     public void Execute()
     {
-      //  AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
+        AudioSource.PlayClipAtPoint(buttonSFX, transform.position);
         if (answer.text == codeAnswer || answer.text == "1845")
         {
            
