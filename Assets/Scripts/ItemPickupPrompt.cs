@@ -25,10 +25,6 @@ public class ItemPickupPrompt : MonoBehaviour
             pickUpText.gameObject.SetActive(true);
 
             Invoke("Disable", 2);
-
-
-
-           
         }
         
     }
