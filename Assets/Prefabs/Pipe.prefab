@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 756280857297669823}
   - component: {fileID: -7400635402975951452}
   - component: {fileID: 7078487034368948164}
+  - component: {fileID: 6873897247365193957}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Pipe
@@ -6237,7 +6238,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.3660153, y: 0.9409111, z: 0.2000003}
   m_Center: {x: 0.37440488, y: 1.3403983, z: -0.41769212}
@@ -6267,3 +6268,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b755e62556c5a48e1a0156923cacbe99, type: 2}
+--- !u!135 &6873897247365193957
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949595946994603026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.47045562
+  m_Center: {x: 0.37440488, y: 1.3403984, z: -0.4176919}
