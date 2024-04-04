@@ -13,6 +13,7 @@ TagManager:
   - WanderPoints2
   - EnemySpawner
   - Key
+  - Enemy
   layers:
   - Default
   - TransparentFX
