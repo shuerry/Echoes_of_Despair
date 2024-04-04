@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adab5b49dac045e6a4d031e4751b0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 5
+  sensitivity: 3
   smoothing: 2
   player: {fileID: 88747644970722935}
 --- !u!114 &8643912051432024230
@@ -756,3 +756,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1949595946994603026, guid: 7ac260144bafe844e85d599cd776dd50, type: 3}
   projectileSpeed: 15
+  reticleImage: {fileID: 0}
