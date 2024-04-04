@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5dbbd06931b14b22a576858fe3d0117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
   gravity: 9.81
   airControl: 10
 --- !u!143 &8871619111847621462
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adab5b49dac045e6a4d031e4751b0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 3
+  sensitivity: 1
   smoothing: 2
   player: {fileID: 88747644970722935}
 --- !u!114 &8643912051432024230

@@ -67281,6 +67281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5429707453886374253, guid: 4605eda646ecc4eed9478a8d0e03ff39, type: 3}
+      propertyPath: m_Text
+      value: 'Left click to put item in your inventory '
+      objectReference: {fileID: 0}
     - target: {fileID: 7537319615359526373, guid: 4605eda646ecc4eed9478a8d0e03ff39, type: 3}
       propertyPath: m_Name
       value: 'Pickup canvas '
