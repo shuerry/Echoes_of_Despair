@@ -37,7 +37,7 @@ public class NavEnemyAI : MonoBehaviour
     int currentDestinationIndex = 0;
     float distanceToPlayer;
     float elapsedTime;
-    EnemyHealth enemyHealth;
+    NavEnemyHealth enemyHealth;
     int health;
     Transform deadTransform;
     bool isDead;
@@ -53,7 +53,7 @@ public class NavEnemyAI : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         //wandTip = GameObject.FindGameObjectWithTag("WandTip");
-        enemyHealth = GetComponent<EnemyHealth>();
+        enemyHealth = GetComponent<NavEnemyHealth>();
         health = enemyHealth.currentHealth;
         isDead = false;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>(); //enemy can use the nav mesh system

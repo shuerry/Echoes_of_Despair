@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NavEnemyHealth : MonoBehaviour
 {
     public int startingHealth = 100;
-    public  int currentHealth;
+    public int currentHealth;
     public AudioClip deadSFX;
     public Slider healthSlider;
 
@@ -40,7 +40,7 @@ public class NavEnemyHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-           
+
         }
         Debug.Log("Current health: " + currentHealth);
 
