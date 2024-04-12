@@ -29,7 +29,7 @@ public class Enemy2AI : MonoBehaviour
     float distanceToPlayer;
 
     int currentDestinationIndex = 0;
-    EnemyHealth enemyHealth;
+    NavEnemyHealth enemyHealth;
     Transform deadTransform;
     int health;
     float elapsedTime = 0;
@@ -41,7 +41,7 @@ public class Enemy2AI : MonoBehaviour
         anim = GetComponent<Animator>();
 
 
-        enemyHealth = GetComponent<EnemyHealth>();
+        enemyHealth = GetComponent<NavEnemyHealth>();
         health = enemyHealth.currentHealth;
 
         isDead = false;
