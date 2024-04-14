@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Keypad : MonoBehaviour
 {
-
-
     public Text answer;
     public Animator door; 
     //public AudioClip doorSFX;

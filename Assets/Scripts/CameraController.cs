@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-{    
+{
     /* 
     This Camera View will move with the mouse
     */
+    public static float sensitivity = 2.0f;
 
-    public float sensitivity = 5.0f;
     public float smoothing = 2.0f;
     // the player is the capsule
     public GameObject player;
