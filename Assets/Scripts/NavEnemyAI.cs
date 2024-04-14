@@ -20,8 +20,9 @@ public class NavEnemyAI : MonoBehaviour
     public float enemySpeed = 5;
     public float chaseDistance = 10;
     public GameObject player;
-  
- 
+
+    public int attackDamage = 5;
+    public float attackCooldown = .3f;
     public GameObject deadVFX;
     public Transform enemyEyes;
     public float fieldOfView = 45f;
@@ -69,7 +70,11 @@ public class NavEnemyAI : MonoBehaviour
 
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         health = enemyHealth.currentHealth;
-
+        if (health <= 0 && currentState != FSMStates.Dead)
+        {
+            currentState = FSMStates.Dead;
+            return;
+        }
         //in update 
         switch (currentState)
         {
@@ -89,11 +94,11 @@ public class NavEnemyAI : MonoBehaviour
 
         }
         elapsedTime += Time.deltaTime;
-        if (health < 0)
+        elapsedTime += Time.deltaTime;
+        if (health <= 0)
         {
             currentState = FSMStates.Dead;
         }
-
 
     }
 
@@ -154,33 +159,37 @@ public class NavEnemyAI : MonoBehaviour
         FaceTarget(nextDestination);
         agent.SetDestination(nextDestination);
     }
-
     void UpdateAttackState()
     {
-        print("Attack");
-
+        print("attack");
         nextDestination = player.transform.position;
-
-        //agent.stoppingDistance = attackDistance;
-
         if (distanceToPlayer <= attackDistance)
         {
-            currentState = FSMStates.Attack;
+            if (elapsedTime >= attackCooldown)
+            {
+                elapsedTime = 0f;
+                currentState = FSMStates.Attack;
+
+                anim.SetInteger("animState", 3);
+                player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+                // [lay attack sound effect
+                // AudioSource.PlayClipAtPoint(attackSFX, transform.position);
+            }
+            FaceTarget(nextDestination);
         }
         else if (distanceToPlayer > attackDistance && distanceToPlayer <= chaseDistance)
         {
             currentState = FSMStates.Chase;
+            FaceTarget(nextDestination);
         }
         else if (distanceToPlayer > chaseDistance)
         {
             currentState = FSMStates.Patrol;
+            FaceTarget(nextDestination);
         }
 
-        FaceTarget(nextDestination);
-        anim.SetInteger("animState", 3); //indicate that the walking animation should be played
-      //  EnemySpellCast();
-
     }
+
 
     void UpdateDeadState()
     {
