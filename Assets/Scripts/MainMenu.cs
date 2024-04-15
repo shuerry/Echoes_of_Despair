@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public Text playTime;
-    private float totalPlayTime;
+    public static float totalPlayTime;
     private string timeDisplay;
 
     void Start()
@@ -18,14 +18,13 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        // Add the time since the last frame to the total play time
         totalPlayTime += Time.deltaTime;
         UpdatePlayTimeDisplay();
         PlayerPrefs.SetFloat("PlayTimeInSeconds", totalPlayTime);
         PlayerPrefs.Save();
     }
 
-    private void UpdatePlayTimeDisplay()
+    void UpdatePlayTimeDisplay()
     {
         TimeSpan timeSpan = TimeSpan.FromSeconds(totalPlayTime);
         timeDisplay = string.Format("{0:00}:{1:00}:{2:00}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
@@ -34,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Progress",SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void ExitGame()

@@ -42099,7 +42099,7 @@ AudioSource:
   m_GameObject: {fileID: 1369888232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: be2086c00ff664213ae97a6f34bc9c96, type: 2}
   m_audioClip: {fileID: 8300000, guid: 43195405c97984673b0268d396cae476, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.191
@@ -67504,10 +67504,6 @@ PrefabInstance:
       propertyPath: gameUI
       value: 
       objectReference: {fileID: 1057545762}
-    - target: {fileID: 46928023855806523, guid: acf5ef436d6e648dcba08920379fec93, type: 3}
-      propertyPath: keyPad
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 137148245876467541, guid: acf5ef436d6e648dcba08920379fec93, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -67592,10 +67588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausedMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 3829967877231416680, guid: acf5ef436d6e648dcba08920379fec93, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4485601337948314085, guid: acf5ef436d6e648dcba08920379fec93, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1369888234}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

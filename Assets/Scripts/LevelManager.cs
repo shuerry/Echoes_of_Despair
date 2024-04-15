@@ -32,6 +32,9 @@ public class LevelManager : MonoBehaviour
 //    float countDown;
     void Start()
     {
+        PlayerPrefs.SetInt("Progress", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.Save();
+
         isGameOver = false;
         // score = 0;
         // countDown = levelDuration;
@@ -45,6 +48,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!isGameOver) {
             if (FindObjectOfType<PlayerHealth>().currentHealth <= 0)
             {
@@ -53,6 +57,10 @@ public class LevelManager : MonoBehaviour
             if (Vector3.Distance(player.transform.position, nextLevelObj.transform.position) < 3) {
                 LevelBeat();
             }
+
+            MainMenu.totalPlayTime += Time.deltaTime;
+            PlayerPrefs.SetFloat("PlayTimeInSeconds", MainMenu.totalPlayTime);
+            PlayerPrefs.Save();
             // will be controlled via player health / death function -- tbd
             /* if (countDown > 0) {
                 countDown -= Time.deltaTime;
