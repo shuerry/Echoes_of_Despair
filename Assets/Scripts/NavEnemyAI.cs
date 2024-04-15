@@ -20,18 +20,12 @@ public class NavEnemyAI : MonoBehaviour
     public float enemySpeed = 5;
     public float chaseDistance = 10;
     public GameObject player;
-
-    public int attackDamage = 5;
+    public GameObject keyPrefab;
+    public int attackDamage = 1;
     public float attackCooldown = .3f;
     public GameObject deadVFX;
     public Transform enemyEyes;
     public float fieldOfView = 45f;
-
-
-
-
-
-
     GameObject[] wanderPoints;
     Animator anim;
     Vector3 nextDestination;
@@ -203,7 +197,7 @@ public class NavEnemyAI : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(deadVFX, deadTransform.position, deadTransform.rotation);
-
+        Instantiate(keyPrefab, transform.position, transform.rotation);
     }
 
 

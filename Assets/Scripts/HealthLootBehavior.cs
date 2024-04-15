@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HealthLootBehavior : MonoBehaviour
 {
-    public int healthAmount = 5;
-    public AudioClip lootSFX;
-    // Start is called before the first frame update
+    public GameObject enemyExpelled;
+    public GameObject keyPrefab;
     void Start()
     {
 
@@ -15,27 +14,25 @@ public class HealthLootBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward, 90 * Time.deltaTime);
-        if (transform.position.y < Random.Range(1.0f, 3.0f))
-        {
-            Destroy(gameObject.GetComponent<Rigidbody>());
-
-        }
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Pipe"))
         {
-            gameObject.SetActive(false);
-            AudioSource.PlayClipAtPoint(lootSFX, transform.position);
-            var playerHealth = other.GetComponent<PlayerHealth>();
-            playerHealth.TakeHealth(healthAmount);
-            Destroy(gameObject, .5f);
-
+            DestroyNPC();
+        
         }
+    }
+
+    void DestroyNPC()
+    {
+        Instantiate(enemyExpelled, transform.position, transform.rotation);
+        gameObject.SetActive(false);
+        Instantiate(keyPrefab, transform.position, transform.rotation);
 
 
     }
 }
+
