@@ -6,14 +6,10 @@ using UnityEngine.UI;
 public class ShootPipe : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    public GameObject playerHand;
    
     public float projectileSpeed = 100;
     public Image reticleImage;
-   
-    void Start()
-    {
-       
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,7 +17,7 @@ public class ShootPipe : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             GameObject projectile = Instantiate(projectilePrefab,
-                transform.position + transform.forward, transform.rotation) as GameObject;
+                playerHand.transform.position + transform.forward, transform.rotation) as GameObject;
 
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
 

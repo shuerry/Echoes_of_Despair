@@ -36,6 +36,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8991457920250255790}
   - {fileID: 1302358939333942746}
   - {fileID: 7287129609405439176}
   - {fileID: 6088211502549455044}
@@ -590,7 +591,7 @@ GameObject:
   m_Layer: 3
   m_Name: ObjectGrabPoint
   m_TagString: PlayerHand
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -603,11 +604,11 @@ Transform:
   m_GameObject: {fileID: 6802131538147288833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.594, y: -0.218, z: 1.549}
+  m_LocalPosition: {x: 0, y: -0.2, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1302358939333942746}
+  m_Father: {fileID: 6960351118706674052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2008345245294053129
 Animator:
@@ -665,7 +666,6 @@ Transform:
   m_Children:
   - {fileID: 8790092350048619987}
   - {fileID: 5369338517390518381}
-  - {fileID: 8991457920250255790}
   m_Father: {fileID: 6960351118706674052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &45712723220456637
@@ -739,7 +739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adab5b49dac045e6a4d031e4751b0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 1
   smoothing: 2
   player: {fileID: 88747644970722935}
 --- !u!114 &8643912051432024230
@@ -755,5 +754,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1949595946994603026, guid: 7ac260144bafe844e85d599cd776dd50, type: 3}
+  playerHand: {fileID: 6699577730890680653}
   projectileSpeed: 15
   reticleImage: {fileID: 0}
