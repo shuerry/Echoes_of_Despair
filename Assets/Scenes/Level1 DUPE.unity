@@ -6456,7 +6456,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3466988514299266787, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
   m_PrefabInstance: {fileID: 1738353762}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &176778123
+--- !u!114 &176778118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6465,9 +6465,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 176778117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c1d72a21cae3c438d4b6ca40bdee3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f005bf6d53162c4ebf7bf767edf00fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &184341485
 GameObject:
   m_ObjectHideFlags: 0
@@ -8478,6 +8479,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 976760066}
     - targetCorrespondingSourceObject: {fileID: 1306815886435308726, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1054624522}
@@ -31195,6 +31199,26 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &976760065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
+  m_PrefabInstance: {fileID: 285620591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &976760066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976760065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b01f36f5e014496f8fb0559ea9e222b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorSFX: {fileID: 8300000, guid: e08b445b8e4638843af67ada9be512a1, type: 3}
+  enemySpawner: {fileID: 755648083}
+  enemyPrefab: {fileID: 176778117}
 --- !u!43 &981828182
 Mesh:
   m_ObjectHideFlags: 0
@@ -58862,9 +58886,17 @@ PrefabInstance:
       propertyPath: startingHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3261550894752781622, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2070720778}
+    - target: {fileID: 3261550894752781622, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
+      propertyPath: deadVFX
+      value: 
+      objectReference: {fileID: 2821949730065331621, guid: 661752f4e386bdc41adf7be672649f8f, type: 3}
     - target: {fileID: 3466988514299266787, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
       propertyPath: m_Name
-      value: Enemy2
+      value: StairsEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3466988514299266787, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
       propertyPath: m_IsActive
@@ -58918,14 +58950,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3261550894752781622, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3466988514299266787, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 176778123}
+      addedObject: {fileID: 176778118}
   m_SourcePrefab: {fileID: 100100000, guid: a963cb40f6ce1b442a0c90e57f492de0, type: 3}
 --- !u!43 &1738843614
 Mesh:
@@ -66025,6 +66056,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2070720778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 88747644970722935, guid: 068e725a170cd4199abd1c98d60206ef, type: 3}
+  m_PrefabInstance: {fileID: 8078246059802532024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2072330250
 Mesh:
   m_ObjectHideFlags: 0

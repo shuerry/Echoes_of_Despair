@@ -39,6 +39,7 @@ public class StairCaseScript : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefab, enemySpawner.transform.position, enemySpawner.transform.rotation) as GameObject;
             Debug.Log("EnemySpawned");
             spawnedYet = true;
+            enemy.SetActive(true);
          }
     }
 }
