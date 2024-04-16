@@ -28,8 +28,10 @@ public class InventoryItemController : MonoBehaviour
                 break;
             case Item.ItemType.MedKit:
                 PlayerHealth.Instance.TakeHealth(item.value);
+                RemoveItem();
                 break;
             case Item.ItemType.Key:
+                RemoveItem();
                 break;
             case Item.ItemType.Journal1:
                 JournalReading.Instance.ShowBookText(true);
@@ -48,7 +50,7 @@ public class InventoryItemController : MonoBehaviour
         }
 
 
-        RemoveItem();    
+            
     }
 
 
