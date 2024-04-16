@@ -41,6 +41,8 @@ public class NavEnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
 
+            AudioSource.PlayClipAtPoint(deadSFX, transform.position);
+
         }
         Debug.Log("Current health: " + currentHealth);
 

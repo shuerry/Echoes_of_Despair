@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20061573, g: 0.20333138, b: 0.2036938, a: 1}
+  m_IndirectSpecularColor: {r: 0.20061573, g: 0.20333138, b: 0.20369378, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8479,9 +8479,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 976760066}
     - targetCorrespondingSourceObject: {fileID: 1306815886435308726, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1054624522}
@@ -31199,26 +31196,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &976760065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1267692135677083517, guid: 4bd69773998da4b5eb5e5beb206ec88d, type: 3}
-  m_PrefabInstance: {fileID: 285620591}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &976760066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976760065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b01f36f5e014496f8fb0559ea9e222b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorSFX: {fileID: 8300000, guid: e08b445b8e4638843af67ada9be512a1, type: 3}
-  enemySpawner: {fileID: 755648083}
-  enemyPrefab: {fileID: 176778117}
 --- !u!43 &981828182
 Mesh:
   m_ObjectHideFlags: 0
